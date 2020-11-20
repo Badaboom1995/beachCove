@@ -1,6 +1,6 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "vs-seti",
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 2
@@ -21,5 +21,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "jest.autoEnable": false,
-  "jest.runAllTestsFirst": false
+  "jest.runAllTestsFirst": false,
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnSave": true
 }

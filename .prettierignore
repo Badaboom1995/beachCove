@@ -2,3 +2,8 @@ build/
 node_modules/
 package-lock.json
 yarn.lock
+package.json
+tsconfig.json
+translation.json
+settings.json
+parser: typescript
