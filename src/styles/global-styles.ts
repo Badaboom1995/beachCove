@@ -8,9 +8,11 @@ export const GlobalStyle = createGlobalStyle`
     height: 100%;
     width: 100%;
   }
-
+  body{
+    background-color: #F3F7FA;
+  }
   body, a {
-    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
   }
 
   #root {
@@ -27,4 +29,5 @@ export const GlobalStyle = createGlobalStyle`
     font-family: inherit;
     font-size: inherit;
   }
+}
 `

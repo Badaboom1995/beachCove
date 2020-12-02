@@ -1,30 +1,11 @@
-import { HomePage } from 'pages/Dashboard'
-import { Auth } from 'pages/Auth'
+import { SearchPage } from 'pages/SearchPage'
 import { NotFoundPage } from 'pages/NotFoundPage'
-import { Plan } from 'pages/Plan'
 
 export const mainRoutes = [
   {
-    path: '/dashboard',
-    component: HomePage,
-    title: 'Dashboard',
-  },
-  {
     path: '/',
-    component: HomePage,
-    title: 'Dashboard',
+    component: SearchPage,
     exact: true,
-  },
-  {
-    path: '/plan',
-    component: Plan,
-    title: 'Plan',
-    blankPage: true,
-  },
-  {
-    path: '/auth',
-    component: Auth,
-    blankPage: true,
   },
   {
     path: '*',
