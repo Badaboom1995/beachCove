@@ -21,7 +21,7 @@ export function App() {
   return (
     <>
       <BrowserRouter>
-        <Helmet defaultTitle="Salo">
+        <Helmet defaultTitle="Beach Cove">
           <meta name="description" content="Search" />
         </Helmet>
         <Switch>{makeRoutes(mainRoutes)}</Switch>

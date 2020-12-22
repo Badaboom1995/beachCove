@@ -9,10 +9,10 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
   }
   body{
-    background-color: #F3F7FA;
+    background-color: #fff;
   }
   body, a {
-    font-family: 'Open Sans', Arial, sans-serif;
+    font-family: 'Lato', Arial, sans-serif;
   }
 
   #root {
@@ -28,6 +28,9 @@ export const GlobalStyle = createGlobalStyle`
   input, select {
     font-family: inherit;
     font-size: inherit;
+  }
+  .link_active{
+    text-decoration: underline;
   }
 }
 `
