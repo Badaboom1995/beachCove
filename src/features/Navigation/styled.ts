@@ -23,7 +23,7 @@ export const Link = styled(NavLink)`
   padding: 30px;
   cursor: pointer;
   text-decoration: none;
-  &.link-active {
+  &.link_active {
     text-decoration: underline;
   }
 `

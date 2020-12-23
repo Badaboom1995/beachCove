@@ -7,10 +7,11 @@ export const Wrapper = styled.div`
   color: #fff;
 `
 export const Title = styled.div`
+  font-family: 'Lato';
   font-size: 24px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 `
 export const Content = styled.div`
   width: 800px;
