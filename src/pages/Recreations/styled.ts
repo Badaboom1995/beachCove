@@ -24,6 +24,7 @@ export const List = styled.ul`
   padding: 0;
 `
 export const Item = styled.li`
+  font-family: 'Lato';
   list-style: none;
   color: ${colors.black};
   margin-bottom: 15px;

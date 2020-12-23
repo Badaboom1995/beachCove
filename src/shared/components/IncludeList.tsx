@@ -26,6 +26,7 @@ type IncludeItemProps = {
   icon?: any
 }
 const IncludeItem = styled.li<IncludeItemProps>`
+  font-family: 'Lato';
   list-style: none;
   padding: 5px 0;
   display: flex;

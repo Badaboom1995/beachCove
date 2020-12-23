@@ -13,10 +13,12 @@ export const TextItem = styled.div`
   margin-bottom: 30px;
 `
 export const Title = styled.div`
+  font-family: 'Lato';
   font-size: 24px;
   margin: 0;
 `
 export const Subtitle = styled.div`
+  font-family: 'Lato';
   font-size: 14px;
   color: ${colors.grey};
 `

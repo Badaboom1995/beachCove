@@ -25,6 +25,7 @@ export const Avatar = styled.div`
   margin-right: 10px;
 `
 export const Author = styled.span`
+  font-family: 'Lato';
   font-size: 14px;
 `
 export const Title = styled.p`

@@ -18,10 +18,14 @@ export const Item = styled.li`
   list-style: none;
 `
 export const Link = styled(NavLink)`
+  font-family: 'Lato';
   display: inline-block;
   padding: 30px;
   cursor: pointer;
   text-decoration: none;
+  &.link-active {
+    text-decoration: underline;
+  }
 `
 
 type ThemeProps = { black?: Boolean }

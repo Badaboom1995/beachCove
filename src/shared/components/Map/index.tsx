@@ -4,19 +4,19 @@ function Map() {
   return (
     <Wrapper>
       <Header>
-        <Title>Contact Us</Title>
+        <Title>Contact Us:</Title>
         <Time>8:00 a.m. - 9:00 p.m.</Time>
       </Header>
       <Row>
-        <Name>Phone</Name>
+        <Name>Phone: </Name>
         <Value>1.866.851.0450 · 207.633.0353</Value>
       </Row>
       <Row>
-        <Name>Adress</Name>
+        <Name>Adress: </Name>
         <Value>48 Lakeview Road · Boothbay Harbor, ME 04538</Value>
       </Row>
       <Row>
-        <Name>Email</Name>
+        <Name>Email: </Name>
         <Value>beachcove@gmail.com</Value>
       </Row>
       <MapWrapper>

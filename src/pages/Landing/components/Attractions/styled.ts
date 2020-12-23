@@ -29,6 +29,7 @@ export const List = styled.ul`
   color: #fff;
 `
 export const ListItem = styled.li`
+  font-family: 'Lato';
   list-style: none;
   font-weight: 300;
   margin-bottom: 10px;

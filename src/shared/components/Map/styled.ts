@@ -14,11 +14,13 @@ export const Header = styled.div`
   justify-content: space-between;
 `
 export const Title = styled.h2`
+  font-family: 'Lato';
   font-size: 24px;
   margin: 0;
   margin-bottom: 15px;
 `
 export const Time = styled.span`
+  font-family: 'Lato';
   font-size: 14px;
 `
 export const Row = styled.div`
@@ -27,9 +29,13 @@ export const Row = styled.div`
   margin-bottom: 5px;
 `
 export const Name = styled.span`
+  font-family: 'Lato';
   font-weight: 700;
+  margin-right: 5px;
 `
-export const Value = styled.span``
+export const Value = styled.span`
+  font-family: 'Lato';
+`
 export const MapWrapper = styled.div`
   margin-top: 30px;
   iframe {

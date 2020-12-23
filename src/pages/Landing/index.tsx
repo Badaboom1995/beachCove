@@ -23,7 +23,7 @@ export function Landing() {
       </Helmet>
       <Navigation />
       <SliderWrapper>
-        <Slider autoplay />
+        <Slider autoplay height="80vh" />
       </SliderWrapper>
       {/* <Welcome /> */}
       <Container>

@@ -34,18 +34,9 @@ function Rooms() {
         <Include>
           <IncludeTitle>All rooms include:</IncludeTitle>
           <IncludeList column />
-          {/* <IncludeList>
-            <IncludeItem icon={panorama}>Private balcony with a water view</IncludeItem>
-            <IncludeItem icon={ac}>Air conditioning</IncludeItem>
-            <IncludeItem icon={heater}>Electric heat</IncludeItem>
-            <IncludeItem icon={fridge}>Mini fridge</IncludeItem>
-            <IncludeItem icon={microwave}>Microwave oven</IncludeItem>
-            <IncludeItem icon={coffe}>Coffee maker</IncludeItem>
-            <IncludeItem icon={tv}>Cable television</IncludeItem>
-          </IncludeList> */}
         </Include>
         <RoomsSlider>
-          <Slider inner arrows height="340spx" />
+          <Slider inner arrows height="340px" />
         </RoomsSlider>
       </MainBlock>
     </Wrapper>

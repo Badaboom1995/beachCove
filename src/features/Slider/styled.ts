@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import arrow from './assets/arrow.svg'
+import { colors } from 'shared/colors'
 
 type WrapperProps = {
   big?: Boolean
@@ -8,6 +9,7 @@ type WrapperProps = {
 export const Slide = styled.div`
   height: 100%;
   filter: brightness(0.5);
+  background-color: ${colors.grey};
   img {
     width: 100%;
   }

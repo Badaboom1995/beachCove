@@ -24,10 +24,12 @@ export const Row = styled.div`
   justify-content: space-between;
 `
 export const Title = styled.p`
+  font-family: 'Lato';
   font-size: 24px;
   font-weight: 700;
 `
 export const Price = styled.span`
+  font-family: 'Lato';
   font-size: 24px;
   font-weight: 300;
 `
@@ -36,6 +38,7 @@ export const Params = styled.div`
   align-items: center;
 `
 export const ParamsItem = styled.div`
+  font-family: 'Lato';
   margin-right: 15px;
   font-size: 13px;
   color: ${colors.black};
