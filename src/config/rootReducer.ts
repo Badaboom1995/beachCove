@@ -1,9 +1,9 @@
 import { combineReducers } from '@reduxjs/toolkit'
 
-// import tickets from 'features/Tickets/duck'
+import app from 'app/duck'
 
 export function createReducer() {
   return combineReducers({
-    // ...tickets,
+    ...app,
   })
 }

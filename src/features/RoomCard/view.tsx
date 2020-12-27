@@ -20,7 +20,7 @@ import single from './assets/single-bed.svg'
 import double from './assets/double-bed.svg'
 import people from './assets/user.svg'
 
-function RoomCardView() {
+function RoomCardView({ room }) {
   const params = {
     beds: { single: 2, double: 1 },
     people: 6,
@@ -29,38 +29,42 @@ function RoomCardView() {
   return (
     <Wrapper>
       <Previews>
-        <Slider inner arrows height="316px" />
+        <Slider inner arrows height="316px" content={room.urls} />
       </Previews>
       <Info>
         <CardHeader>
           <Row>
-            <Title>Balcony Rooms</Title>
-            <Price>$85-$135 </Price>
+            <Title>{room.title}</Title>
+            <Price>{room.price}</Price>
           </Row>
           <Row>
             <Params>
-              <ParamsItem>
-                <Icon src={single} alt="" />
-                <Number>{params.beds.single}</Number> single beds
-              </ParamsItem>
-              <ParamsItem>
-                <Icon src={double} alt="" />
-                <Number>{params.beds.double}</Number> double beds
-              </ParamsItem>
+              {room.single ? (
+                <ParamsItem>
+                  <Icon src={single} alt="" />
+                  <Number>{room.single}</Number> single beds
+                </ParamsItem>
+              ) : (
+                ''
+              )}
+              {room.double ? (
+                <ParamsItem>
+                  <Icon src={double} alt="" />
+                  <Number>{room.double}</Number> double beds
+                </ParamsItem>
+              ) : (
+                ''
+              )}
               <ParamsItem>
                 <Icon src={people} alt="" />
-                <Number>{params.people}</Number> people max
+                <Number>{room.people}</Number> people max
               </ParamsItem>
             </Params>
             <Button>Book</Button>
           </Row>
         </CardHeader>
         <Description>
-          <RegularText>
-            These rooms are located on the first floor and offer superb views of the waters and
-            sunsets from the private balcony. Accommodations include 1 king size bed, TV, A/C, mini
-            fridge, microwave oven, coffee maker and shower. Sleeps up to 2 people.
-          </RegularText>
+          <RegularText>{room.description}</RegularText>
         </Description>
       </Info>
     </Wrapper>

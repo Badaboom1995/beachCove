@@ -9,9 +9,18 @@ export const Content = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 30px;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 export const Section = styled.div`
   width: 30%;
+  @media screen and (max-width: 767px) {
+    width: 90%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
   p {
     margin: 0;
   }

@@ -10,20 +10,32 @@ export const TitleBlock = styled.div`
   text-align: center;
   margin: 0 auto;
   margin-bottom: 50px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `
 export const MainBlock = styled.div`
   display: flex;
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+  }
 `
 export const Include = styled.div`
   width: 50%;
   padding: 0px 50px;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `
 export const IncludeTitle = styled.h2`
   font-family: 'Lato';
   font-weight: bold;
   font-size: 32px;
   line-height: 38px;
-
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+    text-align: center;
+  }
   color: #ffffff;
 `
 export const IncludeList = styled.ul`
@@ -57,4 +69,7 @@ export const RoomsSlider = styled.div`
   overflow: hidden;
   margin: 20px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `

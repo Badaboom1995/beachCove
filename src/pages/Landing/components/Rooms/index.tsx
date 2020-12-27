@@ -1,26 +1,14 @@
 import React from 'react'
 import { MainTitle, RegularText } from 'shared/typography'
-import {
-  Wrapper,
-  TitleBlock,
-  MainBlock,
-  Include,
-  IncludeTitle,
-  // IncludeList,
-  // IncludeItem,
-  RoomsSlider,
-} from './styled'
+import { Wrapper, TitleBlock, MainBlock, Include, IncludeTitle, RoomsSlider } from './styled'
 import Slider from 'features/Slider'
 import IncludeList from 'shared/components/IncludeList'
-// import ac from 'shared/assets/ac.svg'
-// import coffe from 'shared/assets/coffee-cup.svg'
-// import fridge from 'shared/assets/fridge.svg'
-// import heater from 'shared/assets/heater.svg'
-// import microwave from 'shared/assets/microwave.svg'
-// import panorama from 'shared/assets/panorama.svg'
-// import tv from 'shared/assets/television.svg'
+import { useSelector } from 'react-redux'
 
 function Rooms() {
+  const rooms = useSelector((state: any) => state.app.rooms)
+  const roomsUrls = Object.keys(rooms).reduce((accum, id): any => [...accum, ...rooms[id].urls], [])
+  const isColumn = window.innerWidth > 1023 ? true : false
   return (
     <Wrapper>
       <TitleBlock>
@@ -33,10 +21,10 @@ function Rooms() {
       <MainBlock>
         <Include>
           <IncludeTitle>All rooms include:</IncludeTitle>
-          <IncludeList column />
+          <IncludeList column={isColumn} />
         </Include>
         <RoomsSlider>
-          <Slider inner arrows height="340px" />
+          <Slider inner arrows height="340px" content={roomsUrls} />
         </RoomsSlider>
       </MainBlock>
     </Wrapper>

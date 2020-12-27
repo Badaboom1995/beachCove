@@ -3,7 +3,6 @@
  */
 
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
-import { createInjectorsEnhancer, forceReducerReload } from 'redux-injectors'
 import createSagaMiddleware from 'redux-saga'
 
 import { createReducer } from './rootReducer'
@@ -16,26 +15,16 @@ export function configureAppStore() {
   // Create the store with saga middleware
   const middlewares = [sagaMiddleware]
 
-  const enhancers = [
-    createInjectorsEnhancer({
-      createReducer,
-      runSaga,
-    }),
-  ]
-
   const store = configureStore({
     reducer: createReducer(),
     middleware: [...getDefaultMiddleware(), ...middlewares],
     devTools: process.env.NODE_ENV !== 'production',
-    enhancers,
   })
 
   // Make reducers hot reloadable, see http://mxs.is/googmo
   /* istanbul ignore next */
   if (module.hot) {
-    module.hot.accept('./rootReducer', () => {
-      forceReducerReload(store)
-    })
+    module.hot.accept('./rootReducer', () => {})
   }
 
   return store

@@ -3,7 +3,7 @@ import React from 'react'
 import { MainTitle } from 'shared/typography'
 import { Wrapper, SliderBlock, TextBlock, TitleBlock, Subtitle, List, ListItem } from './styled'
 
-function Attractions() {
+function Attractions(props) {
   return (
     <Wrapper>
       <TextBlock>
@@ -21,7 +21,7 @@ function Attractions() {
         </List>
       </TextBlock>
       <SliderBlock>
-        <Slider inner arrows height="400px" />
+        <Slider inner arrows height="400px" content={props.content} />
       </SliderBlock>
     </Wrapper>
   )

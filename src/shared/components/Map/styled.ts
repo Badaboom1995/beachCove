@@ -7,6 +7,9 @@ export const Wrapper = styled(Card)`
   color: #000;
   border-radius: 10px;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 `
 export const Header = styled.div`
   display: flex;

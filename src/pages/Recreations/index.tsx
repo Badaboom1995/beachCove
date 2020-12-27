@@ -7,9 +7,14 @@ import Slider from 'features/Slider'
 import { RegularText, MainTitle } from 'shared/typography'
 import { Section, Text, List, Item, CarouselBlock, CarouselWrapper } from './styled'
 import Pictures from './components/Pictures'
+import one from './assets/one.jpg'
+import two from './assets/two.jpg'
+import three from './assets/three.jpg'
+import four from './assets/four.jpg'
+import five from './assets/five.jpg'
 
 import Carousel from 'features/Carousel'
-
+const sliderContent = [four, two, five]
 export function Recreations() {
   return (
     <>
@@ -19,7 +24,10 @@ export function Recreations() {
       </Helmet>
       <Navigation />
       <SliderWrapper>
-        <Slider title="Relax by the pool or lakeside. Swim, canoe, fish or take advantage of the many activities and amusements the Boothbay Region" />
+        <Slider
+          title="Relax by the pool or lakeside. Swim, canoe, fish or take advantage of the many activities and amusements the Boothbay Region"
+          content={sliderContent}
+        />
       </SliderWrapper>
       <RegularText style={{ textAlign: 'center', padding: '10px' }}>
         Please visit{' '}
@@ -45,7 +53,13 @@ export function Recreations() {
 
       <CarouselBlock>
         <MainTitle black>Just one mile away</MainTitle>
-        <RegularText style={{ width: '570px', margin: '0 auto', marginBottom: '30px' }}>
+        <RegularText
+          style={{
+            width: window.innerWidth > 767 ? '570px' : 'auto',
+            margin: '0 auto',
+            marginBottom: '30px',
+          }}
+        >
           Beautiful downtown Boothbay Harbor which offers shopping, galleries, public library and a
           variety of community activities
         </RegularText>

@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { colors } from 'shared/colors'
+import { darken, lighten } from 'polished'
 
 const Button = styled.button`
   background: ${colors.primary};
@@ -12,6 +13,16 @@ const Button = styled.button`
   border-radius: 5px;
   font-family: 'Lato';
   cursor: pointer;
+  transition: 0.1s all ease;
+  &:hover {
+    background-color: ${lighten(0.05, colors.primary)};
+  }
+  &:active {
+    background-color: ${lighten(0.15, colors.primary)};
+  }
+  &:focus {
+    outline: none;
+  }
 `
 const Wrapper = styled.div`
   display: flex;

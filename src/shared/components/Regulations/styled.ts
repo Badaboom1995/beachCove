@@ -3,7 +3,10 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   display: flex;
-  padding: 50px 0;
+  padding: 50px 20px;
+  @media screen and (max-width: 767px) {
+    flex-wrap: wrap;
+  }
 `
 export const Text = styled.div`
   flex-grow: 1;

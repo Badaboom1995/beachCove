@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Button from 'shared/components/Button'
 import Container from 'shared/components/Container'
-import { Wrapper, Logo, Menu, Item, Link } from './styled'
+import { Wrapper, Logo, Menu, Item, Link, Toggle } from './styled'
 
 function NavigationView(props) {
-  console.log(props.land)
+  const [isOpen, setMenu] = useState(false)
   return (
     <Container>
       <Wrapper black={props.black}>
@@ -12,7 +12,13 @@ function NavigationView(props) {
           Beach Cove <br />
           Waterfront Inn
         </Logo>
-        <Menu>
+        <Toggle
+          onClick={() => {
+            isOpen ? setMenu(false) : setMenu(true)
+          }}
+          isOpen={isOpen}
+        />
+        <Menu isOpen={isOpen}>
           <Item>
             <Link to="/accomodation" activeClassName="link_active">
               Accomodation

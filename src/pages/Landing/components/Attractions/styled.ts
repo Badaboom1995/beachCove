@@ -3,11 +3,18 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   display: flex;
+  @media screen and (max-width: 1023px) {
+    flex-wrap: wrap;
+  }
   background-color: ${colors.black};
 `
 export const SliderBlock = styled.div`
   position: relative;
   width: 605px;
+  max-height: 400px;
+  @media screen and (max-width: 1023px) {
+    width: 100%;
+  }
 `
 export const TextBlock = styled.div`
   padding: 30px;

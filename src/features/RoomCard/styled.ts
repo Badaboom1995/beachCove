@@ -4,11 +4,24 @@ import styled from 'styled-components'
 export const Wrapper = styled.div`
   display: flex;
   margin-bottom: 40px;
+  @media screen and (max-width: 1023px) {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    width: 70vw;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
 `
 export const Previews = styled.div`
   position: relative;
   min-width: 450px;
-  background-color: #ccc;
+  @media screen and (max-width: 1023px) {
+    width: 100%;
+    height: 350px;
+    min-width: 0;
+  }
 `
 export const Info = styled.div`
   flex-grow: 1;

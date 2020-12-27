@@ -10,25 +10,27 @@ export const Slide = styled.div`
   height: 100%;
   filter: brightness(0.5);
   background-color: ${colors.grey};
+  position: relative;
   img {
     width: 100%;
   }
 `
 export const Wrapper = styled.div<WrapperProps>`
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
   overflow: hidden;
   .slick-dots .slick-active div {
     background-color: #fff;
   }
-  .slick-slider {
-    /* height: 100%; */
-  }
+
   ${Slide} {
     filter: ${props => props.inner && 'brightness(0.9)'};
+    img {
+      transform: ${props => !props.inner && 'translateY(-20%)'};
+      @media screen and (max-width: 767px) {
+        height: ${props => !props.inner && '80vh !important'};
+        width: ${props => !props.inner && 'auto !important'};
+        transform: ${props => !props.inner && 'translateX(-50%)'};
+      }
+    }
   }
 `
 
@@ -91,4 +93,9 @@ export const Title = styled.div<TitleProps>`
 
   opacity: ${props => (props.visible ? 1 : 0)};
   transition: 0.7s all ease;
+
+  @media screen and (max-width: 767px) {
+    width: 80%;
+    font-size: 18px;
+  }
 `

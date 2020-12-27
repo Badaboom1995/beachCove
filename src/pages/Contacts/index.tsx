@@ -14,7 +14,7 @@ export function Contacts() {
         <title>Home</title>
         <meta name="description" content="A Boilerplate application homepage" />
       </Helmet>
-      <Navigation black />
+      <Navigation black={window.innerWidth > 767} />
       <Wrapper>
         <Content>
           <Directions>

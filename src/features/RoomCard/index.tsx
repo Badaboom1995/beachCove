@@ -1,6 +1,6 @@
 import React from 'react'
 import RoomCardView from './view'
-function RoomCard() {
-  return <RoomCardView />
+function RoomCard(props) {
+  return <RoomCardView {...props} />
 }
 export default RoomCard

@@ -10,6 +10,9 @@ export const MainTitle = styled.h2<MainTitleProps>`
   font-weight: 400;
   margin: 10px 0;
   color: ${props => (props.black ? colors.black : colors.white)};
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+  }
 `
 
 type TextProps = {
@@ -23,10 +26,19 @@ export const Text = styled.p<TextProps>`
 `
 export const SmallText = styled(Text)`
   font-size: 14px;
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
 `
 export const RegularText = styled(Text)`
   font-size: 18px;
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
 `
 export const BigText = styled(Text)`
   font-size: 24px;
+  @media screen and (max-width: 768px) {
+    font-size: 18px;
+  }
 `

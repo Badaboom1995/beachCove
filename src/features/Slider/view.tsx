@@ -3,7 +3,6 @@ import { Wrapper, Slide, ArrowDown, StyledArrow, Dot, Title } from './styled'
 import Slider from 'react-slick'
 import nature from './assets/nature.jpg'
 import arrow from './assets/arrow.svg'
-import preview from './assets/preview.jpg'
 
 type SliderProps = {
   content?: any[]
@@ -40,6 +39,7 @@ function SliderView({ content, big, title, inner, arrows, dots, height, autoplay
       </div>
     ),
     customPaging: i => <Dot />,
+    fade: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -56,15 +56,17 @@ function SliderView({ content, big, title, inner, arrows, dots, height, autoplay
     <Wrapper big={big} inner={inner}>
       {title && <Title visible={titleVisible}>{title}</Title>}
       <Slider {...settings}>
-        {/* {props.content.map(imgSrc => (
-          <img src={imgSrc} alt="" />
-        ))} */}
-        <Slide>
-          <img style={{ height: height || 'auto' }} src={nature} alt="" />
-        </Slide>
-        <Slide>
-          <img style={{ height: height || 'auto' }} src={nature} alt="" />
-        </Slide>
+        {content ? (
+          content.map(imgSrc => (
+            <Slide>
+              <img style={{ height: height || 'auto' }} src={imgSrc} alt="" />
+            </Slide>
+          ))
+        ) : (
+          <Slide>
+            <img style={{ height: height || 'auto' }} src={nature} alt="" />
+          </Slide>
+        )}
       </Slider>
       {!inner && <ArrowDown src={arrow} />}
     </Wrapper>

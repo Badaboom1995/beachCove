@@ -8,7 +8,7 @@ function CarouselView() {
   const settings = {
     className: 'center',
     autoplay: true,
-    centerMode: true,
+    centerMode: window.innerWidth > 1023 ? true : false,
     infinite: true,
     centerPadding: '60px',
     slidesToShow: 1,

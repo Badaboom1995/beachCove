@@ -18,6 +18,9 @@ export const Content = styled.div`
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  @media screen and (max-width: 1023px) {
+    width: 100%;
+  }
 `
 export const Item = styled.div`
   width: 25%;

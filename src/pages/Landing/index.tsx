@@ -9,10 +9,12 @@ import Rooms from './components/Rooms'
 import Amenities from './components/Amenities'
 import Attractions from './components/Attractions'
 import Reviews from './components/Reviews'
-import { FirstScreen, SingleSlider, BackBlock } from './styled'
+import { SingleSlider, BackBlock } from './styled'
 import SliderWrapper from 'shared/components/SliderWrapper'
 import Footer from 'shared/components/Footer'
 import Navigation from 'features/Navigation'
+import two from './assets/2.jpg'
+import three from './assets/3.jpg'
 
 export function Landing() {
   return (
@@ -23,9 +25,8 @@ export function Landing() {
       </Helmet>
       <Navigation />
       <SliderWrapper>
-        <Slider autoplay height="80vh" />
+        <Slider autoplay content={[three, two]} />
       </SliderWrapper>
-      {/* <Welcome /> */}
       <Container>
         <Welcome />
         <Video />
@@ -34,10 +35,10 @@ export function Landing() {
           <Rooms />
           <Amenities />
         </BackBlock>
-        <Attractions />
+        <Attractions content={[three, two]} />
         <Reviews />
         <SingleSlider>
-          <Slider inner arrows />
+          <Slider inner arrows content={[three, two]} height="550px" />
         </SingleSlider>
       </Container>
       <Footer />

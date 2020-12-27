@@ -15,10 +15,16 @@ export const Section = styled(Container)`
   background-color: ${colors.lightGrey};
   padding: 30px 20px;
   margin-bottom: 30px;
+  @media screen and (max-width: 1023px) {
+    flex-wrap: wrap;
+  }
 `
 export const Text = styled.div`
   width: 38%;
   padding: 0 20px;
+  @media screen and (max-width: 1023px) {
+    width: 100%;
+  }
 `
 export const List = styled.ul`
   padding: 0;

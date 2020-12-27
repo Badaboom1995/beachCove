@@ -1,5 +1,6 @@
+import { colors } from 'shared/colors'
 import styled from 'styled-components'
-import bigBack from './back.svg'
+import bigBack from './bigBack.svg'
 
 export const Wrapper = styled.div`
   display: flex;
@@ -26,4 +27,19 @@ export const BackBlock = styled.div`
   background-image: url(${bigBack});
   background-position: -320px 620px;
   background-repeat: no-repeat;
+  @media screen and (max-width: 1023px) {
+    background-position: -430px 870px;
+  }
+  @media screen and (max-width: 767px) {
+    background-position: -650px 1370px;
+  }
+  @media screen and (max-width: 550px) {
+    background-position: -650px 1320px;
+  }
+  @media screen and (max-width: 450px) {
+    background-position: -750px 1330px;
+  }
+  @media screen and (max-width: 350px) {
+    background-color: ${colors.primary};
+  }
 `

@@ -7,6 +7,7 @@ import heater from 'shared/assets/heater.svg'
 import microwave from 'shared/assets/microwave.svg'
 import panorama from 'shared/assets/panorama.svg'
 import tv from 'shared/assets/television.svg'
+import water from 'shared/assets/water.svg'
 
 type IncludeListProps = {
   column?: Boolean
@@ -20,6 +21,9 @@ const List = styled.ul<IncludeListProps>`
   li {
     width: ${props => !props.column && '25%'};
     text-align: center;
+    @media screen and (max-width: 768px) {
+      width: auto;
+    }
   }
 `
 type IncludeItemProps = {
@@ -48,7 +52,7 @@ function IncludeList({ column }: IncludeListProps) {
   return (
     <List column={column}>
       <IncludeItem icon={panorama}>Private balcony </IncludeItem>
-      <IncludeItem icon={panorama}>Water view </IncludeItem>
+      <IncludeItem icon={water}>Water view </IncludeItem>
       <IncludeItem icon={ac}>Air conditioning</IncludeItem>
       <IncludeItem icon={heater}>Electric heat</IncludeItem>
       <IncludeItem icon={fridge}>Mini fridge</IncludeItem>
