@@ -3,8 +3,10 @@ import styled from 'styled-components'
 import { colors } from 'shared/colors'
 import { darken, lighten } from 'polished'
 
-const Button = styled.button`
+const Button = styled.a`
   background: ${colors.primary};
+  text-decoration: none;
+  position: relative;
   min-width: 110px;
   border: none;
   font-size: 16px;
@@ -27,12 +29,15 @@ const Button = styled.button`
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
+  text-align: center;
 `
 
 function Card(props) {
   return (
     <Wrapper>
-      <Button>{props.children}</Button>
+      <Button href="https://apps.gracesoft.com/pms/onlinebookingV2/RoomDetails.aspx?PropertyId=314&PMSFolder=PMS5">
+        {props.children}
+      </Button>
     </Wrapper>
   )
 }

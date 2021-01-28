@@ -8,8 +8,7 @@ function Welcome() {
       <Content>
         <MainTitle>Welcome to Beach Cove Waterfront Inn!</MainTitle>
         <BigText white>
-          A beautiful beachfront inn in Boothbay Harbor. Located just off Route 27 one mile from the
-          hustle and bustle of downtown Boothbay Harbor{' '}
+          A quiet, secluded getaway, that provides the perfect location for your vacation.
         </BigText>
       </Content>
     </Wrapper>

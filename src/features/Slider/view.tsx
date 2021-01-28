@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Wrapper, Slide, ArrowDown, StyledArrow, Dot, Title } from './styled'
 import Slider from 'react-slick'
 import nature from './assets/nature.jpg'
-import arrow from './assets/arrow.svg'
+import arrow from 'assets/arrow.svg'
 
 type SliderProps = {
   content?: any[]

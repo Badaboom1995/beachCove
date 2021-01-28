@@ -7,14 +7,14 @@ import Slider from 'features/Slider'
 import { RegularText, MainTitle } from 'shared/typography'
 import { Section, Text, List, Item, CarouselBlock, CarouselWrapper } from './styled'
 import Pictures from './components/Pictures'
-import one from './assets/one.jpg'
-import two from './assets/two.jpg'
-import three from './assets/three.jpg'
-import four from './assets/four.jpg'
-import five from './assets/five.jpg'
+import boats from 'assets/boats2.jpg'
+import light from 'assets/light.jpg'
+import pool from 'assets/pool.jpg'
+import picnic from 'assets/picnic.jpg'
+import whale from 'assets/whale.jpg'
 
 import Carousel from 'features/Carousel'
-const sliderContent = [four, two, five]
+const sliderContent = [light, whale, boats, pool, picnic]
 export function Recreations() {
   return (
     <>

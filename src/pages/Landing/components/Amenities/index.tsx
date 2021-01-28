@@ -5,6 +5,8 @@ import img from './img.jpg'
 import canoe from './canoe.jpg'
 import enjoy from './enjoy.jpg'
 import family from './family.jpg'
+import picnic from './picnic.jpg'
+import boats from './boats.jpg'
 
 function Amenities() {
   return (
@@ -39,6 +41,18 @@ function Amenities() {
           <Image src={enjoy} />
           <RegularText>
             <b>Enjoy</b> 3+ acres of rolling landscape
+          </RegularText>
+        </ListItem>
+        <ListItem>
+          <Image src={picnic} />
+          <RegularText>
+            Use our <b>waterfront fireplace</b> and picnic area
+          </RegularText>
+        </ListItem>
+        <ListItem>
+          <Image src={boats} />
+          <RegularText>
+            <b>Fish from our dock </b>or from our boats
           </RegularText>
         </ListItem>
       </List>

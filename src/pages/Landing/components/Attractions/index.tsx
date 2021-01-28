@@ -13,15 +13,17 @@ function Attractions(props) {
         </TitleBlock>
         <List>
           <ListItem>- Boat trips to islands, lighthouses, whales, seals and puffins</ListItem>
+          <ListItem>- Ocean fishing day trips</ListItem>
           <ListItem>- Shopping and Galleries</ListItem>
           <ListItem>- Public library</ListItem>
           <ListItem>- Ocean fishing day trips</ListItem>
           <ListItem>- Maine Aquarium</ListItem>
+          <ListItem>- Coastal Maine Botanical Gardens</ListItem>
           <ListItem>- Railway Village</ListItem>
         </List>
       </TextBlock>
       <SliderBlock>
-        <Slider inner arrows height="400px" content={props.content} />
+        <Slider inner arrows height="468px" content={props.content} />
       </SliderBlock>
     </Wrapper>
   )

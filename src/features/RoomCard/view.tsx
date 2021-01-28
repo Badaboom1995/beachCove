@@ -1,6 +1,13 @@
-import React from 'react'
-import { RegularText } from 'shared/typography'
+import React, { useState } from 'react'
+import { SmallText } from 'shared/typography'
 import Slider from 'features/Slider'
+import smoke from './assets/smoke.svg'
+import parking from './assets/parking.svg'
+import pool from './assets/pool.svg'
+import service from './assets/service.svg'
+import wifi from './assets/wifi.svg'
+import breakfast from './assets/breakfast.svg'
+
 import {
   Wrapper,
   Previews,
@@ -13,59 +20,128 @@ import {
   Description,
   ParamsItem,
   Icon,
-  Number,
+  Collapse,
+  ScrollableParams,
+  SmallPrice,
+  Features,
+  CollapseTitle,
 } from './styled'
+
 import Button from 'shared/components/Button'
-import single from './assets/single-bed.svg'
-import double from './assets/double-bed.svg'
 import people from './assets/user.svg'
 
-function RoomCardView({ room }) {
-  const params = {
-    beds: { single: 2, double: 1 },
-    people: 6,
-  }
-
+function RoomCardView({ room, vertical }) {
+  const getOrderedUrls = () =>
+    room.urls.reduce((accum, current, i) => {
+      console.log('room')
+      return [...accum, room.urls.find(url => url.includes(`N${i + 1}`))]
+    }, [])
+  const [featuresOpen, setFeaturesOpen] = useState(true)
+  const getFeatures = featuresStr => featuresStr?.split(',').map(item => <div>{item}</div>)
   return (
-    <Wrapper>
+    <Wrapper vertical={vertical}>
       <Previews>
-        <Slider inner arrows height="316px" content={room.urls} />
+        <Slider inner arrows={!vertical} height="316px" content={getOrderedUrls()} />
       </Previews>
       <Info>
         <CardHeader>
           <Row>
-            <Title>{room.title}</Title>
-            <Price>{room.price}</Price>
-          </Row>
-          <Row>
-            <Params>
-              {room.single ? (
-                <ParamsItem>
-                  <Icon src={single} alt="" />
-                  <Number>{room.single}</Number> single beds
-                </ParamsItem>
-              ) : (
-                ''
-              )}
-              {room.double ? (
-                <ParamsItem>
-                  <Icon src={double} alt="" />
-                  <Number>{room.double}</Number> double beds
-                </ParamsItem>
-              ) : (
-                ''
-              )}
-              <ParamsItem>
-                <Icon src={people} alt="" />
-                <Number>{room.people}</Number> people max
-              </ParamsItem>
-            </Params>
-            <Button>Book</Button>
+            <Description>
+              <Title>{room.title}</Title>
+              <SmallText>{room.description}</SmallText>
+            </Description>
+            <div>
+              <SmallPrice>{room.price}</SmallPrice>
+              <Button style={{ position: 'relative' }}>
+                <span style={{ fontSize: '18px' }}>Book </span>
+                {/* <SmallPrice>{room.price}</SmallPrice> */}
+              </Button>
+            </div>
           </Row>
         </CardHeader>
-        <Description>
-          <RegularText>{room.description}</RegularText>
-        </Description>
+        {!vertical && (
+          <div>
+            <Row style={{ background: '#f1f1f1' }}>
+              <Params>
+                <ScrollableParams>
+                  <ParamsItem>
+                    <Icon src={people} alt="" />
+                    {room.people} people
+                  </ParamsItem>
+                  <ParamsItem>
+                    <Icon src={smoke} alt="" />
+                    Non-smoking
+                  </ParamsItem>
+                  <ParamsItem>
+                    <Icon src={pool} alt="" />
+                    Outdoor Pool
+                  </ParamsItem>
+                  <ParamsItem>
+                    <Icon src={parking} alt="" />
+                    Free Parking
+                  </ParamsItem>
+                  <ParamsItem>
+                    <Icon src={service} alt="" />
+                    Room Service
+                  </ParamsItem>
+                  <ParamsItem>
+                    <Icon src={wifi} alt="" />
+                    Free Wi-Fi
+                  </ParamsItem>
+                  <ParamsItem>
+                    <Icon src={breakfast} alt="" />
+                    Breakfast
+                  </ParamsItem>
+                </ScrollableParams>
+              </Params>
+            </Row>
+            <Row>
+              <Collapse open={featuresOpen}>
+                <CollapseTitle>Room Features:</CollapseTitle>
+                <Features>{getFeatures(room.features)}</Features>
+              </Collapse>
+            </Row>
+          </div>
+        )}
+        {vertical && (
+          <Collapse open={true}>
+            <Params>
+              <ParamsItem>
+                <Icon src={people} alt="" />
+                {room.people} people
+              </ParamsItem>
+              <ParamsItem>
+                <Icon src={smoke} alt="" />
+                Non-smoking
+              </ParamsItem>
+              <ParamsItem>
+                <Icon src={pool} alt="" />
+                Outdoor Pool
+              </ParamsItem>
+              <ParamsItem>
+                <Icon src={breakfast} alt="" />
+                Breakfast
+              </ParamsItem>
+              <ParamsItem>
+                <Icon src={parking} alt="" />
+                Free Parking
+              </ParamsItem>
+              <ParamsItem>
+                <Icon src={service} alt="" />
+                Room Service
+              </ParamsItem>
+              <ParamsItem>
+                <Icon src={wifi} alt="" />
+                Free Wi-Fi
+              </ParamsItem>
+            </Params>
+          </Collapse>
+        )}
+        {/* {!vertical && (
+          <Description>
+            <RegularText>{room.description}</RegularText>
+          </Description>
+        )} */}
       </Info>
     </Wrapper>
   )

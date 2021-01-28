@@ -1,6 +1,6 @@
 import React from 'react'
 import { Wrapper, Item, ItemTitle, Icon } from './styled'
-import muffin from './assets/muffin.svg'
+import muffin from '../../assets/muffin.svg'
 import family from './assets/family.svg'
 import map from './assets/map.svg'
 import boat from './assets/boat.svg'

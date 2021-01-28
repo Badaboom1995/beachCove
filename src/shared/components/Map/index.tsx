@@ -9,15 +9,15 @@ function Map() {
       </Header>
       <Row>
         <Name>Phone: </Name>
-        <Value>1.866.851.0450 · 207.633.0353</Value>
+        <Value> 207-633-0353, 1-866-851-0450</Value>
       </Row>
       <Row>
         <Name>Adress: </Name>
-        <Value>48 Lakeview Road · Boothbay Harbor, ME 04538</Value>
+        <Value>48 Lakeview Road, Boothbay Harbor, ME, 04538</Value>
       </Row>
       <Row>
         <Name>Email: </Name>
-        <Value>beachcove@gmail.com</Value>
+        <Value>stay@beachcovehotel.com</Value>
       </Row>
       <MapWrapper>
         <iframe

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import arrow from './assets/arrow.svg'
+import arrow from 'assets/arrow.svg'
 import { colors } from 'shared/colors'
 
 type WrapperProps = {
@@ -8,7 +8,7 @@ type WrapperProps = {
 }
 export const Slide = styled.div`
   height: 100%;
-  filter: brightness(0.5);
+  filter: brightness(0.6);
   background-color: ${colors.grey};
   position: relative;
   img {

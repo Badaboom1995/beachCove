@@ -24,7 +24,7 @@ export const TitleBlock = styled.div`
 export const List = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   @media screen and (max-width: 1023px) {
     width: 550px;
     margin: 0 auto;
@@ -38,6 +38,7 @@ export const ListItem = styled(Card)`
   width: 225px;
   text-align: center;
   color: #000;
+  margin: 15px;
   p {
     padding: 0 10px;
   }

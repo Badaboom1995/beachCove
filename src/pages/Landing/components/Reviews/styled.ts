@@ -1,9 +1,6 @@
 import styled from 'styled-components'
 import Card from 'shared/components/Card'
 import reviewsBack from './assets/reviewsBack.svg'
-import dolina from './assets/dolina.png'
-import densie from './assets/densie.png'
-import hollywd from './assets/hollywd.png'
 
 export const Wrapper = styled.div`
   padding: 50px 0px;

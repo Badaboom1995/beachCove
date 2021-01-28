@@ -11,7 +11,7 @@ export const mainRoutes = [
     exact: true,
   },
   {
-    path: '/accomodation',
+    path: '/accommodation',
     component: Accomodations,
   },
   {

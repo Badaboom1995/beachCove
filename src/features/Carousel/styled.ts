@@ -11,6 +11,7 @@ export const Slide = styled.div`
   width: 800px;
   img {
     height: 100%;
+    width: 95%;
     margin: 0 auto;
   }
 `

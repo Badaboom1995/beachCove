@@ -20,7 +20,7 @@ const List = styled.ul<IncludeListProps>`
   justify-content: ${props => !props.column && 'space-around'};
   li {
     width: ${props => !props.column && '25%'};
-    text-align: center;
+    text-align: ${props => (props.column ? 'left' : 'center')};
     @media screen and (max-width: 768px) {
       width: auto;
     }
@@ -33,7 +33,7 @@ const IncludeItem = styled.li<IncludeItemProps>`
   font-family: 'Lato';
   list-style: none;
   padding: 5px 0;
-  display: flex;
+  /* display: flex; */
   color: #fff;
   font-weight: normal;
   &:before {
@@ -51,8 +51,8 @@ const IncludeItem = styled.li<IncludeItemProps>`
 function IncludeList({ column }: IncludeListProps) {
   return (
     <List column={column}>
-      <IncludeItem icon={panorama}>Private balcony </IncludeItem>
-      <IncludeItem icon={water}>Water view </IncludeItem>
+      <IncludeItem icon={panorama}>Balcony or water view</IncludeItem>
+      <IncludeItem icon={water}>Wi-Fi </IncludeItem>
       <IncludeItem icon={ac}>Air conditioning</IncludeItem>
       <IncludeItem icon={heater}>Electric heat</IncludeItem>
       <IncludeItem icon={fridge}>Mini fridge</IncludeItem>

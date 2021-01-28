@@ -25,8 +25,10 @@ export const SingleSlider = styled.div`
 `
 export const BackBlock = styled.div`
   background-image: url(${bigBack});
-  background-position: -320px 620px;
+
+  background-position: -540px 590px;
   background-repeat: no-repeat;
+  background-size: 1885px;
   @media screen and (max-width: 1023px) {
     background-position: -430px 870px;
   }

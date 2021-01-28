@@ -20,8 +20,8 @@ function NavigationView(props) {
         />
         <Menu isOpen={isOpen}>
           <Item>
-            <Link to="/accomodation" activeClassName="link_active">
-              Accomodation
+            <Link to="/accommodation" activeClassName="link_active">
+              Accommodation
             </Link>
           </Item>
           <Item>
