@@ -78,6 +78,7 @@ export const Features = styled.div`
   display: flex;
   flex-wrap: wrap;
   padding: 0 15px;
+  font-family: 'Lato';
   div {
     width: 50%;
     &:before {

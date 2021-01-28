@@ -33,7 +33,6 @@ import people from './assets/user.svg'
 function RoomCardView({ room, vertical }) {
   const getOrderedUrls = () =>
     room.urls.reduce((accum, current, i) => {
-      console.log('room')
       return [...accum, room.urls.find(url => url.includes(`N${i + 1}`))]
     }, [])
   const [featuresOpen, setFeaturesOpen] = useState(true)
@@ -61,7 +60,7 @@ function RoomCardView({ room, vertical }) {
         </CardHeader>
         {!vertical && (
           <div>
-            <Row style={{ background: '#f1f1f1' }}>
+            <Row style={{ borderBottom: '1px solid #f6f6f6' }}>
               <Params>
                 <ScrollableParams>
                   <ParamsItem>

@@ -1,9 +1,9 @@
 import React from 'react'
 import { RegularText, SmallText } from 'shared/typography'
 import { Wrapper, Section, Social, Icon, Content } from './styled'
-import facebook from './assets/facebook.png'
-import insta from './assets/insta.png'
-import twitter from './assets/twitter.png'
+import expedia from './assets/expedia.png'
+import trip from './assets/trip.png'
+import booking from './assets/booking.png'
 import Container from '../Container'
 
 function Footer() {
@@ -22,13 +22,13 @@ function Footer() {
             </RegularText>
             <Social>
               <a href="">
-                <Icon src={insta} />
+                <Icon src={expedia} />
               </a>
               <a href="">
-                <Icon src={facebook} />
+                <Icon src={trip} />
               </a>
               <a href="">
-                <Icon src={twitter} />
+                <Icon src={booking} />
               </a>
             </Social>
           </Section>
