@@ -76,11 +76,17 @@ export const Description = styled.div`
 `
 export const Features = styled.div`
   display: flex;
+  flex-direction: column;
+  height: 150px;
   flex-wrap: wrap;
   padding: 0 15px;
   font-family: 'Lato';
   div {
-    width: 50%;
+    width: 49%;
+    @media screen and (max-width: 1023px) {
+      width: 90%;
+      margin: 0 auto;
+    }
     &:before {
       content: '- ';
     }

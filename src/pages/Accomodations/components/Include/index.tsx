@@ -5,7 +5,7 @@ import { Wrapper, Title, Content, Item } from './styled'
 function Include() {
   return (
     <Wrapper>
-      <Title>All rooms include</Title>
+      <Title>Rooms include</Title>
       <Content>
         <IncludeList />
       </Content>

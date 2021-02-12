@@ -51,7 +51,7 @@ const IncludeItem = styled.li<IncludeItemProps>`
 function IncludeList({ column }: IncludeListProps) {
   return (
     <List column={column}>
-      <IncludeItem icon={panorama}>Balcony or water view</IncludeItem>
+      <IncludeItem icon={panorama}>Balcony with water view</IncludeItem>
       <IncludeItem icon={water}>Wi-Fi </IncludeItem>
       <IncludeItem icon={ac}>Air conditioning</IncludeItem>
       <IncludeItem icon={heater}>Electric heat</IncludeItem>

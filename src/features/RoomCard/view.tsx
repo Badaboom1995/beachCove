@@ -4,7 +4,7 @@ import Slider from 'features/Slider'
 import smoke from './assets/smoke.svg'
 import parking from './assets/parking.svg'
 import pool from './assets/pool.svg'
-import service from './assets/service.svg'
+import service from './assets/cleaning.png'
 import wifi from './assets/wifi.svg'
 import breakfast from './assets/breakfast.svg'
 
@@ -89,7 +89,7 @@ function RoomCardView({ room, vertical }) {
                   </ParamsItem>
                   <ParamsItem>
                     <Icon src={breakfast} alt="" />
-                    Breakfast
+                    Continentinal breakfast
                   </ParamsItem>
                 </ScrollableParams>
               </Params>
@@ -107,7 +107,7 @@ function RoomCardView({ room, vertical }) {
             <Params>
               <ParamsItem>
                 <Icon src={people} alt="" />
-                {room.people} people
+                {room.people} people max
               </ParamsItem>
               <ParamsItem>
                 <Icon src={smoke} alt="" />

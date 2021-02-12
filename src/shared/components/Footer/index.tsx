@@ -7,6 +7,7 @@ import booking from './assets/booking.png'
 import Container from '../Container'
 
 function Footer() {
+  const date = new Date()
   return (
     <Wrapper>
       <Container>
@@ -16,7 +17,7 @@ function Footer() {
             <RegularText>stay@beachcovehotel.com</RegularText>
             <RegularText>1.866.851.0450 or 207.633.0353</RegularText>
           </Section>
-          <Section>
+          {/* <Section>
             <RegularText style={{ textAlign: 'center', marginBottom: '15px', fontWeight: 700 }}>
               Follow us
             </RegularText>
@@ -31,9 +32,9 @@ function Footer() {
                 <Icon src={booking} />
               </a>
             </Social>
-          </Section>
+          </Section> */}
           <Section style={{ display: 'flex', flexDirection: 'column-reverse' }}>
-            <SmallText>© 2020 Beach Cove Hotel. All rights reserved.</SmallText>
+            <SmallText>© {date.getFullYear()} Beach Cove Hotel. All rights reserved.</SmallText>
           </Section>
         </Content>
       </Container>

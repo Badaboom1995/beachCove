@@ -17,7 +17,7 @@ function Regulations() {
             <SmallText>
               A one night deposit plus tax is required for room reservation. Prices subject to ME
               taxes. Rates higher on Holidays and weekends. A fourteen (14) day cancellation notice
-              is required for refund of deposit. Refunds are subject to a $20.00 administrative fee.
+              is required for refund of deposit.
             </SmallText>
           </TextItem>
           <TextItem>
@@ -27,9 +27,11 @@ function Regulations() {
               A.M. or earlier.
             </Subtitle>
             <SmallText>
-              - No refunds for early checkout. - VISA and MASTERCARD welcome. - No personal checks
-              accepted. - All rooms are non-smoking. - We have only few pet friendly rooms. Call to
-              check for availability of these rooms and pet policy.
+              No refunds for early checkout. We accept all major credit cards: VISA, MASTERCARD,
+              DISCOVER, AMERICAN EXPRESS. No personal checks accepted. All rooms are non-smoking. We
+              have only few pet friendly rooms. Only pet friendly rooms will be hosting guests
+              traveling with pets. Please contact the Inn prior to booking the room to enquire
+              availability of this rooms and the pet policy.
             </SmallText>
           </TextItem>
         </Text>

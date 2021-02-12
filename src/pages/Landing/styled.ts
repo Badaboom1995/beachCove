@@ -18,7 +18,7 @@ export const FirstScreen = styled.div`
 `
 export const SingleSlider = styled.div`
   position: relative;
-  height: 550px;
+  /* height: 550px; */
   width: 100%;
   overflow: hidden;
   margin-bottom: 30px;

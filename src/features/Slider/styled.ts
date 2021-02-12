@@ -24,10 +24,13 @@ export const Wrapper = styled.div<WrapperProps>`
   ${Slide} {
     filter: ${props => props.inner && 'brightness(0.9)'};
     img {
-      transform: ${props => !props.inner && 'translateY(-20%)'};
+      /* position: absolute; */
+      width: ${props => props.inner && '100%'};
+      transform: ${props => (props.inner ? 'translateX(0%)' : 'translateY(-20%)')};
       @media screen and (max-width: 767px) {
         height: ${props => !props.inner && '80vh !important'};
         width: ${props => !props.inner && 'auto !important'};
+
         transform: ${props => !props.inner && 'translateX(-50%)'};
       }
     }

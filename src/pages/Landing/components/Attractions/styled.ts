@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
   display: flex;
   @media screen and (max-width: 1023px) {
     flex-wrap: wrap;
+    margin-bottom: 50px;
   }
   background-color: ${colors.black};
 `

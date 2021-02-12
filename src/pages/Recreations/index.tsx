@@ -25,7 +25,7 @@ export function Recreations() {
       <Navigation />
       <SliderWrapper>
         <Slider
-          title="Relax by the pool or lakeside. Swim, canoe, fish or take advantage of the many activities and amusements the Boothbay Region"
+          title="Relax by the pool or lakeside. Swim, canoe, fish or take advantage of the many activities and amusements of the Boothbay Region"
           content={sliderContent}
         />
       </SliderWrapper>
@@ -68,7 +68,7 @@ export function Recreations() {
         </CarouselWrapper>
       </CarouselBlock>
 
-      <Section>
+      {/* <Section>
         <Text>
           <MainTitle black>For Children</MainTitle>
           <List>
@@ -90,7 +90,7 @@ export function Recreations() {
           </List>
         </Text>
         <Pictures />
-      </Section>
+      </Section> */}
 
       <Footer />
     </>

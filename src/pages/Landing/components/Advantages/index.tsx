@@ -12,7 +12,7 @@ function Advantages() {
     <Wrapper>
       <Item>
         <Icon src={muffin} />
-        <ItemTitle>Free breakfast</ItemTitle>
+        <ItemTitle>Complimentary breakfast</ItemTitle>
         <SmallText>With homemade muffins, coffee and juice each morning</SmallText>
       </Item>
       <Item>
