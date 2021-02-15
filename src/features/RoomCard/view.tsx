@@ -31,10 +31,12 @@ import Button from 'shared/components/Button'
 import people from './assets/user.svg'
 
 function RoomCardView({ room, vertical }) {
-  const getOrderedUrls = () =>
-    room.urls.reduce((accum, current, i) => {
-      return [...accum, room.urls.find(url => url.includes(`N${i + 1}`))]
-    }, [])
+  // const getOrderedUrls = () =>
+  //   room.urls.reduce((accum, current, i) => {
+  //     return [...accum, room.urls.find(url => url.includes(`N${i + 1}`))]
+  //   }, [])
+  const getOrderedUrls = () => room.urls.slice().sort()
+  getOrderedUrls()
   const [featuresOpen, setFeaturesOpen] = useState(true)
   const getFeatures = featuresStr => featuresStr?.split(',').map(item => <div>{item}</div>)
   return (
