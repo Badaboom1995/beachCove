@@ -64,7 +64,7 @@ export const Params = styled.div`
 export const ParamsItem = styled.div`
   font-family: 'Lato';
   margin-right: 15px;
-  font-size: 13px;
+  font-size: 10px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -81,6 +81,9 @@ export const Features = styled.div`
   flex-wrap: wrap;
   padding: 0 15px;
   font-family: 'Lato';
+  @media screen and (max-width: 1023px) {
+    height: auto;
+  }
   div {
     width: 49%;
     @media screen and (max-width: 1023px) {
@@ -172,7 +175,7 @@ export const Wrapper = styled.div<CardProps>`
     max-height: none;
     margin:0;
     @media screen and (max-width: 1023px){
-      min-width: 25%;
+      width: 25%;
       padding: 10px;
     }
   }

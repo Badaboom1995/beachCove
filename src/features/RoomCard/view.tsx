@@ -15,7 +15,6 @@ import {
   CardHeader,
   Row,
   Title,
-  Price,
   Params,
   Description,
   ParamsItem,
@@ -63,7 +62,7 @@ function RoomCardView({ room, vertical }) {
                 <ScrollableParams>
                   <ParamsItem>
                     <Icon src={people} alt="" />
-                    {room.people} people
+                    {room.people} people max
                   </ParamsItem>
                   <ParamsItem>
                     <Icon src={smoke} alt="" />
@@ -87,7 +86,7 @@ function RoomCardView({ room, vertical }) {
                   </ParamsItem>
                   <ParamsItem>
                     <Icon src={breakfast} alt="" />
-                    Continentinal breakfast
+                    Continental breakfast
                   </ParamsItem>
                 </ScrollableParams>
               </Params>
@@ -117,7 +116,7 @@ function RoomCardView({ room, vertical }) {
               </ParamsItem>
               <ParamsItem>
                 <Icon src={breakfast} alt="" />
-                Breakfast
+                Continental breakfast
               </ParamsItem>
               <ParamsItem>
                 <Icon src={parking} alt="" />

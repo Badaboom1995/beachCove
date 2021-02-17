@@ -14,7 +14,7 @@ export const Content = styled(Container)`
   display: flex;
   @media screen and (max-width: 1023px) {
     flex-wrap: wrap;
-    padding: 20px;
+    padding: 0px;
   }
 `
 export const Directions = styled.div`

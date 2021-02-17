@@ -12,7 +12,7 @@ function Map() {
         <Value> 207-633-0353, 1-866-851-0450</Value>
       </Row>
       <Row>
-        <Name>Adress: </Name>
+        <Name>Address: </Name>
         <Value>48 Lakeview Road, Boothbay Harbor, ME, 04538</Value>
       </Row>
       <Row>

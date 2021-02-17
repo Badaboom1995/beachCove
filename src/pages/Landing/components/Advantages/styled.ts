@@ -4,12 +4,18 @@ export const Wrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   padding: 60px;
+  @media screen and (max-width: 1023px) {
+    padding: 30px;
+  }
 `
 export const Content = styled.div``
 export const Item = styled.div`
   width: 300px;
   text-align: center;
   padding: 25px;
+  @media screen and (max-width: 1023px) {
+    width: 100%;
+  }
 `
 export const ItemTitle = styled.h3`
   font-family: 'Sanchez';
